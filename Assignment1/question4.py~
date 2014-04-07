@@ -1,0 +1,7 @@
+#Displays the reversal of a DNA sequence
+DNAsequence=raw_input("enter DNA sequence ")
+l=len(DNAsequence)
+
+for nucleotide in DNAsequence:
+    
+print DNAsequence[-1:]
