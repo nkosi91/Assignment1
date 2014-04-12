@@ -1,7 +1,9 @@
 #computes the average length of a list of DNA Sequences
-i=0
-seqlist=raw_input("first sequence ")
+seq1=raw_input("first sequence ")
+seq2=raw_input("first sequence ")
+seq3=raw_input("first sequence ")
 
+seqlist=seq1
 
 for seq in seqlist:
     print seq   
