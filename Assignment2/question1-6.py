@@ -1,7 +1,19 @@
 def read_fasta_file(fastafile):
-    fastafile=raw_input("enter path to fasta file ")
-    open("fastafile","r")
-    return fastafile
+    fasta=open(fastafile, "r")
+    fasta.seek(0,0)
+    header=""
+    seq=""
+    for line in fasta:
+        if line.startswith(">"):
+            header=line.strip()
+        else:
+            seq=seq+line.strip()
+    idandseq=(header,seq)
+    return idandseq
+    
+fasta=raw_input("enter path to fasta file ")
+print read_fasta_file(fasta)
+
 
 def reverse_complement(seq):
     revcomp=''
